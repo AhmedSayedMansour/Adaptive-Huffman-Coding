@@ -18,7 +18,7 @@ public class Node {
 
         this.symbol = symbol;
         this.code = code;
-        this.number = number;
+        this.number = Number;
         this.count = count;
     }
 
