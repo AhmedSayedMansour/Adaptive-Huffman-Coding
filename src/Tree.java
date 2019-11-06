@@ -3,8 +3,7 @@ import java.util.HashMap;
 public class Tree {
     public HashMap<Character,String> dic = new HashMap<Character, String>();    //Short code
     public HashMap<Character,Node> content = new HashMap<Character,Node>();     //each inserted character and its inserted node
-    public Node NYT;
-    public Node root;
+    public Node root,NYT;
 
     public Tree(){
         root = new Node(null,null,null,' ',"-1",100,0);
@@ -162,5 +161,19 @@ public class Tree {
             if(P.right.symbol == ' ')  P = P.right;
             else P = P.left;
         }
+    }
+
+    public char ShortCodeKey (String shortcode){
+        for (char i : dic.keySet()) {
+            if (dic.get(i).matches(shortcode)) return i;
+        }
+        return ' ';
+    }
+
+    public char getcharfromcode (String code){
+        for (char i : content.keySet()) {
+            if (content.get(i).code.matches(code)) return i;
+        }
+        return ' ';
     }
 }
