@@ -3,8 +3,8 @@ import java.util.ArrayList;
 
 public class AdaptiveHuffmanCoding {
     public static void main(String[] args){
-        System.out.println( Compress("Mans_LOVES_Streamer") );
-        System.out.println( Decompress( Compress("Mans_LOVES_Streamer") ) );
+        System.out.println( Compress("ABCCCAAAA") );
+        System.out.println( Decompress( Compress("ABCCCAAAA") ) );
     }
 
     public static String Compress(String S){
